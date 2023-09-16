@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
 
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyDescription("Icon and cursor file format support for Paint.NET")]
@@ -12,3 +13,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Icon and cursor file format support for Paint.NET")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyVersion("4.0.1.0")]
+[assembly: SupportedOSPlatform("windows")]
