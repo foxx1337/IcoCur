@@ -6,17 +6,16 @@
 
 using System.Drawing;
 
-namespace PaintDotNet.Data
+namespace IcoCur;
+
+internal struct IcoCurSaveFormat
 {
-  internal struct IcoCurSaveFormat
-  {
     public Size Dimensions;
     public bool EightBit;
 
     public IcoCurSaveFormat(int width, int height, bool eightBit)
     {
-      this.Dimensions = new Size(width, height);
-      this.EightBit = eightBit;
+        Dimensions = new Size(width, height);
+        EightBit = eightBit;
     }
-  }
 }

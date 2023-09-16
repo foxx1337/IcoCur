@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Security.Permissions;
 
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyDescription("Icon and cursor file format support for Paint.NET")]
@@ -13,4 +12,3 @@ using System.Security.Permissions;
 [assembly: AssemblyTitle("Icon and cursor file format support for Paint.NET")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyVersion("4.0.1.0")]
-[assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]

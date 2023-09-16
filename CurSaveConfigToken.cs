@@ -6,27 +6,27 @@
 
 using System;
 using System.Drawing;
+using PaintDotNet;
 
-namespace PaintDotNet.Data
+namespace IcoCur;
+
+[Serializable]
+public class CurSaveConfigToken : SaveConfigToken
 {
-  [Serializable]
-  public class CurSaveConfigToken : SaveConfigToken
-  {
     public Point HotSpot;
     public bool EightBit;
 
-    public virtual object Clone() => (object) new CurSaveConfigToken(this);
+    public override object Clone() => new CurSaveConfigToken(this);
 
     public CurSaveConfigToken()
     {
-      this.HotSpot = new Point(0, 0);
-      this.EightBit = false;
+        HotSpot = new Point(0, 0);
+        EightBit = false;
     }
 
     protected CurSaveConfigToken(CurSaveConfigToken copyMe)
     {
-      this.HotSpot = copyMe.HotSpot;
-      this.EightBit = copyMe.EightBit;
+        HotSpot = copyMe.HotSpot;
+        EightBit = copyMe.EightBit;
     }
-  }
 }

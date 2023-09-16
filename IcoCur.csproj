@@ -1,71 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
-  <!--Project was exported from assembly: C:\src\cs\Paint.net\IcoCur.dll-->
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{551F72A5-9946-4423-AD6A-5EFF2C2307D8}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>IcoCur</AssemblyName>
-    <ApplicationVersion>4.0.1.0</ApplicationVersion>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>2.0</OldToolsVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <UseWindowsForms>True</UseWindowsForms>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
+    <Reference Include="PaintDotNet.ComponentModel">
+      <HintPath>.\paint.net\PaintDotNet.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="PaintDotNet.Core">
+      <HintPath>.\paint.net\PaintDotNet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PaintDotNet.Data">
+      <HintPath>.\paint.net\PaintDotNet.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PaintDotNet.Primitives">
+      <HintPath>.\paint.net\PaintDotNet.Primitives.dll</HintPath>
+    </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="EOStreamUtility.cs" />
-    <Compile Include="EOIcoCurLoader.cs" />
-    <Compile Include="EOIcoCurWriter.cs" />
-    <Compile Include="EvanRIFFFormat.cs" />
-    <Compile Include="EOOffsetStream.cs" />
-    <Compile Include="EvanBitmap.cs" />
-    <Compile Include="EOFC\BooleanBitArray.cs" />
-    <Compile Include="IcoCur\IcoCurLoadForm.cs" />
-    <Compile Include="IcoCur\Properties\Settings.cs" />
-    <Compile Include="PaintDotNet\ANISaveOptForm.cs" />
-    <Compile Include="PaintDotNet\EOPDNUtility.cs" />
-    <Compile Include="PaintDotNet\Data\PDNCursorFormat.cs" />
-    <Compile Include="PaintDotNet\Data\IcoCurSaveFormat.cs" />
-    <Compile Include="PaintDotNet\Data\CurSaveConfigToken.cs" />
-    <Compile Include="PaintDotNet\Data\CurSaveConfigWidget.cs" />
-    <Compile Include="PaintDotNet\Data\IcoSaveForm.cs" />
-    <Compile Include="PaintDotNet\Data\PDNIcoCurFormat.cs" />
-    <Compile Include="PaintDotNet\Data\PDNANIFormat.cs" />
-    <Compile Include="AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="IcoCur\IcoCurLoadForm.resx" />
-    <EmbeddedResource Include="PaintDotNet\ANISaveOptForm.resx" />
-    <EmbeddedResource Include="PaintDotNet\Data\CurSaveConfigWidget.resx" />
-    <EmbeddedResource Include="PaintDotNet\Data\IcoSaveForm.resx" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
